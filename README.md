@@ -1,28 +1,90 @@
 # Maliza
-### Screenshots
+![hero](assets/docs/image.png)
+## 1)Screenshots
 
 - **Login, Register**
 
-![Screenshot_20250824-142745.png](attachment:dbe9fcaa-4491-49bd-b604-228cd582a580:Screenshot_20250824-142745.png)
+![login](assets/docs/Screenshot_20250824-142745.png)
 
-![Screenshot_20250824-142755.png](attachment:bb1a3246-d1b3-499a-8477-71d33d2b8397:Screenshot_20250824-142755.png)
+![register](assets/docs/Screenshot_20250824-142755.png)
 
 - **Accueil (météo + liste + profil + logout)**
 
-![Screenshot_20250824-181831.png](attachment:a985e459-e60b-4c54-a5fa-c5f756610306:Screenshot_20250824-181831.png)
+![Home](assets/docs/Screenshot_20250824-181831.png)
 
 - **Ajout/édition/complétion/suppression d’une tâche (avec Slidable)**
 
-![Screenshot_20250824-174022.png](attachment:b18bb46e-23d9-4943-8c01-e072f63f8634:Screenshot_20250824-174022.png)
+![ajout_check](assets/docs/Screenshot_20250824-174022.png)
 
-![Screenshot_20250824-192021.png](attachment:96b6b325-a75e-4d6d-a798-4375f4400566:Screenshot_20250824-192021.png)
+![edit_delete](attachment:96b6b325-a75e-4d6d-a798-4375f4400566:Screenshot_20250824-192021.png)
 
 - **Recherche**
     
-    ![Screenshot_20250824-174056.png](attachment:801f3b42-1064-415e-bbf0-d2d1b9ad1727:Screenshot_20250824-174056.png)
+    ![recherce](assets/docs/Screenshot_20250824-174056.png)
     
 - **Profil (sélection photo)**
 
-![Screenshot_20250824-174239.png](attachment:e441fc5d-9f12-4b7f-b8be-13ecf04a572c:Screenshot_20250824-174239.png)
+![profile](assets/docs/Screenshot_20250824-174239.png)
 
 - Historique
+
+![historique-1](assets/docs/Screenshot_20250824-193256.png)
+
+![historique-2](assets/docs/Screenshot_20250824-174041.png)
+
+![historique-3](assets/docs/Screenshot_20250824-193303.png)
+
+- Meteo
+
+![day](assets/docs/Screenshot_20250824-181840.png)
+
+![nuit](assets/docs/Screenshot_20250824-193059.png)
+
+---
+## 2)Structure du projet
+
+Organisation logique en trois grands blocs :
+
+- **`lib/core/`** : fondations techniques partagées (API, configuration, erreurs, modèles, réseau, thème, routes, widgets génériques).
+- **`lib/features/`** : fonctionnalités applicatives (authentification, cœur de l’app).
+- **`assets/`** : ressources statiques (images, icônes).
+
+Aperçu des dossiers clés :
+
+```yaml
+lib/
+  core/
+    api/
+      api_endpoints.dart        # URLs de l’API
+      remote_database_helper.dart
+      remote_db_updater.dart    # Logique de synchronisation
+      weather_service.dart      # Intégration WeatherAPI
+    config/
+      config_global.dart        # Nom app, version, IP serveur API
+    data/
+      account_cache.dart        # Session & préférences (SharedPreferences)
+      database_helper.dart      # SQLite (tables todo, todo_action, profile)
+    error/                      # Exceptions API/Réseau/Météo
+    models/                     # Todo, User, ApiResult, SyncResult, etc.
+    network/
+      network_client.dart       # Client HTTP + gestion d’erreurs
+    routes/
+      app_routes.dart           # Noms des routes
+      app_router.dart           # Générateur de routes
+    theme/
+      theme_config.dart         # Thème ForUI
+
+  features/
+    auth/
+      provider/auth_provider.dart
+      presentation/pages/login_page.dart
+      presentation/pages/registration_page.dart
+    app/
+      provider/                 # TaskProvider, WeatherProvider, ProfileProvider, ...
+      presentation/
+        pages/                  # HomePage, TodoPage, ProfilePage, RecherchePage, App
+        widget/                 # Weather, TaskListWidget, TopBar, dialogs, LogoutBtn
+        bloc/                   # AddTaskBloc, ListTodos (UI blocs)
+
+  main.dart                     # Point d’entrée
+```
