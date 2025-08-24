@@ -1,5 +1,5 @@
 # Maliza
-<img src="assets/docs/image.png" alt="hero" width="250"/>
+<img src="assets/docs/image.png" alt="hero" />
 
 ## 1) Screenshots
 
