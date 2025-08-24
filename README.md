@@ -1,47 +1,58 @@
 # Maliza
-![hero](assets/docs/image.png)
-## 1)Screenshots
+<img src="assets/docs/image.png" alt="hero" width="250"/>
+
+## 1) Screenshots
 
 - **Login, Register**
 
-![login](assets/docs/Screenshot_20250824-142745.png)
-
-![register](assets/docs/Screenshot_20250824-142755.png)
+<p align="center">
+    <img src="assets/docs/Screenshot_20250824-142745.png" alt="Login" width="150"/>
+    <img src="assets/docs/Screenshot_20250824-142755.png" alt="Register" width="150"/>
+</p>
 
 - **Accueil (météo + liste + profil + logout)**
 
-![Home](assets/docs/Screenshot_20250824-181831.png)
+<p align="center">
+    <img src="assets/docs/Screenshot_20250824-181831.png" alt="Accueil" width="150"/>
+</p>
 
 - **Ajout/édition/complétion/suppression d’une tâche (avec Slidable)**
 
-![ajout_check](assets/docs/Screenshot_20250824-174022.png)
-
-![edit_delete](attachment:96b6b325-a75e-4d6d-a798-4375f4400566:Screenshot_20250824-192021.png)
+<p align="center">
+    <img src="assets/docs/Screenshot_20250824-174022.png" alt="Ajout" width="150"/>
+    <img src="assets/docs/Screenshot_20250824-192021.png" alt="Edit/Delete" width="150"/>
+</p>
 
 - **Recherche**
-    
-    ![recherce](assets/docs/Screenshot_20250824-174056.png)
-    
+
+<p align="center">
+    <img src="assets/docs/Screenshot_20250824-174056.png" alt="Recherche" width="150"/>
+</p>
+
 - **Profil (sélection photo)**
 
-![profile](assets/docs/Screenshot_20250824-174239.png)
+<p align="center">
+    <img src="assets/docs/Screenshot_20250824-174239.png" alt="Profil" width="150"/>
+</p>
 
-- Historique
+- **Historique**
 
-![historique-1](assets/docs/Screenshot_20250824-193256.png)
+<p align="center">
+    <img src="assets/docs/Screenshot_20250824-193256.png" alt="Historique 1" width="150"/>
+    <img src="assets/docs/Screenshot_20250824-174041.png" alt="Historique 2" width="150"/>
+    <img src="assets/docs/Screenshot_20250824-193303.png" alt="Historique 3" width="150"/>
+</p>
 
-![historique-2](assets/docs/Screenshot_20250824-174041.png)
+- **Météo**
 
-![historique-3](assets/docs/Screenshot_20250824-193303.png)
-
-- Meteo
-
-![day](assets/docs/Screenshot_20250824-181840.png)
-
-![nuit](assets/docs/Screenshot_20250824-193059.png)
+<p align="center">
+    <img src="assets/docs/Screenshot_20250824-181840.png" alt="Météo jour" width="150"/>
+    <img src="assets/docs/Screenshot_20250824-193059.png" alt="Météo nuit" width="150"/>
+</p>
 
 ---
-## 2)Structure du projet
+
+## 2) Structure du projet
 
 Organisation logique en trois grands blocs :
 
@@ -87,4 +98,3 @@ lib/
         bloc/                   # AddTaskBloc, ListTodos (UI blocs)
 
   main.dart                     # Point d’entrée
-```
